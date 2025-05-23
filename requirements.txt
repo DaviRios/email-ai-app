@@ -4,3 +4,4 @@ torch
 pdfplumber
 openai
 python-dotenv
+gunicorn
