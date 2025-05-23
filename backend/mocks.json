@@ -1,0 +1,101 @@
+{
+  "aniversario": {
+    "responses": [
+      "Muito obrigado pela lembrança! Desejamos também muitas alegrias para você.",
+      "Agradecemos pelos votos! Ficamos felizes com sua mensagem.",
+      "Sua mensagem foi recebida com carinho. Conte conosco sempre!"
+    ],
+    "correct_category": "aniversario",
+    "productivity": "improdutivo"
+  },
+  "agradecimento": {
+    "responses": [
+      "De nada! Ficamos felizes em poder ajudar.",
+      "Estamos sempre à disposição para colaborar.",
+      "Agradecemos pelo reconhecimento. Seguimos à disposição para o que precisar."
+    ],
+    "correct_category": "agradecimento",
+    "productivity": "produtivo"
+  },
+  "solicitacao": {
+    "responses": [
+      "Recebido! Vamos analisar sua solicitação e daremos retorno o quanto antes.",
+      "Sua solicitação está sendo processada. Em breve traremos novidades.",
+      "Estamos cuidando da sua demanda. Agradecemos pela confiança."
+    ],
+    "correct_category": "solicitacao",
+    "productivity": "produtivo"
+  },
+  "reclamacao": {
+    "responses": [
+      "Lamentamos a experiência negativa. Já estamos tratando do assunto internamente.",
+      "Agradecemos por nos informar. Estamos tomando medidas para resolver isso o quanto antes.",
+      "Desculpe pelo ocorrido. Vamos corrigir o mais rápido possível."
+    ],
+    "correct_category": "reclamacao",
+    "productivity": "produtivo"
+  },
+  "elogio": {
+    "responses": [
+      "Ficamos felizes em saber que nosso trabalho foi reconhecido. Obrigado!",
+      "Agradecemos o elogio e seguimos motivados a manter a qualidade.",
+      "Seu feedback positivo é muito importante para nós. Conte sempre conosco!"
+    ],
+    "correct_category": "elogio",
+    "productivity": "produtivo"
+  },
+  "convite": {
+    "responses": [
+      "Obrigado pelo convite! Vamos avaliar e confirmamos em breve.",
+      "Agradecemos o convite. Vamos verificar a disponibilidade da equipe.",
+      "Ficamos honrados com o convite. Retornaremos em breve com uma resposta."
+    ],
+    "correct_category": "convite",
+    "productivity": "improdutivo"
+  },
+  "cobranca": {
+    "responses": [
+      "Estamos verificando a pendência e daremos retorno com a solução.",
+      "Agradecemos o aviso. O time financeiro já está ciente e cuidando disso.",
+      "Já estamos em processo de regularização. Obrigado pela paciência."
+    ],
+    "correct_category": "cobranca",
+    "productivity": "produtivo"
+  },
+  "feedback": {
+    "responses": [
+      "Agradecemos pelo feedback! Isso nos ajuda a melhorar continuamente.",
+      "Seu retorno foi registrado. Muito obrigado por nos ajudar a evoluir.",
+      "Estamos analisando suas observações e em breve traremos melhorias."
+    ],
+    "correct_category": "feedback",
+    "productivity": "produtivo"
+  },
+  "confirmacao": {
+    "responses": [
+      "Confirmação recebida! Agradecemos.",
+      "Está tudo certo. Obrigado por confirmar.",
+      "Perfeito! Seguimos com a programação conforme confirmado."
+    ],
+    "correct_category": "confirmacao",
+    "productivity": "produtivo"
+  },
+  "cancelamento": {
+    "responses": [
+      "Entendido, o cancelamento foi registrado. Esperamos contar com você no futuro.",
+      "Lamentamos o cancelamento, mas respeitamos sua decisão.",
+      "Agradecemos por avisar. Cancelamento efetuado com sucesso."
+    ],
+    "correct_category": "cancelamento",
+    "productivity": "produtivo"
+  },
+  "default": {
+    "responses": [
+      "Recebemos sua mensagem e vamos analisar com atenção.",
+      "Obrigado pelo contato! Em breve retornaremos com mais informações.",
+      "Sua mensagem foi registrada. Em breve traremos uma resposta apropriada."
+    ],
+    "correct_category": "default",
+    "productivity": "improdutivo"
+  }
+}
