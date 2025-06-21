@@ -46,11 +46,11 @@
   },
   "convite": {
     "responses": [
-      "Obrigado pelo convite! Vamos avaliar e confirmamos em breve.",
-      "Agradecemos o convite. Vamos verificar a disponibilidade da equipe.",
-      "Ficamos honrados com o convite. Retornaremos em breve com uma resposta."
+      "Obrigado pelo email! Vamos avaliar e confirmamos em breve.",
+      "Agradecemos o email. Vamos verificar a disponibilidade da equipe.",
+      "Ficamos honrados com o email. Retornaremos em breve com uma resposta."
     ],
-    "correct_category": "convite",
+    "correct_category": "email",
     "productivity": "improdutivo"
   },
   "cobranca": {
