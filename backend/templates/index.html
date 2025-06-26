@@ -42,26 +42,49 @@
         const fileNameSpan = document.getElementById("fileName");
         const textarea = document.getElementById("email_text");
 
+        form.addEventListener("submit", async (event) => {
+            event.preventDefault();
 
-        form.addEventListener("submit", () => {
-            form.classList.add("loading");
             button.disabled = true;
             button.querySelector("span").textContent = "Analisando...";
-            const resultado = `📩 Email Recebido:\n${email}\n\n🏷️ Categoria:\n${category}\n\n💬 Resposta Sugerida:\n${response}`;
-            textarea.value = resultado;
 
-            button.disabled = true;
-            button.innerText = "Analisando...";
-            setTimeout(() => {
+            const formData = new FormData(form);
+
+            try {
+                const response = await fetch("/analyze", {
+                    method: "POST",
+                    body: formData,
+                    headers: {
+                        "Accept": "application/json"
+                    }
+                });
+
+
+                if (!response.ok) {
+                    const errorData = await response.json();
+                    throw new Error(errorData.error || "Erro desconhecido");
+                }
+
+                const data = await response.json();
+
+                // Monta o texto do resultado que você quer mostrar no textarea
+                const resultado = `📩 Email Recebido:\n${data.email}\n\n🏷️ Categoria:\n${data.category}\n\n💬 Resposta Sugerida:\n${data.response}`;
+
+                textarea.value = resultado;
+
+            } catch (error) {
+                textarea.value = "Erro ao processar o arquivo: " + error.message;
+            } finally {
                 button.disabled = false;
-                button.innerText = "Analisar";
-            }, 2000);
+                button.querySelector("span").textContent = "Analisar";
+            }
         });
 
         fileInput.addEventListener("change", () => {
             const fileName = fileInput.files.length > 0 ? fileInput.files[0].name : "Nenhum arquivo escolhido";
             fileNameSpan.textContent = fileName;
         });
+
     </script>
 
 
