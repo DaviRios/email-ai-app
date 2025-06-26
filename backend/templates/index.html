@@ -27,26 +27,35 @@
                         </div>
                     </div>
                     <div class="group">
-                    <button type="submit"><span>Analisar</span>
-                    </button>
+                        <button type="submit" id="submitBtn"><span>Analisar</span>
+                        </button>
                     </div>
-
-                    <textarea readonly name="email_text" rows="3" cols="40"></textarea>
-
+                    <textarea readonly name="email_text" id="email_text" rows="10" cols="60"></textarea>
                 </form>
             </div>
         </div>
     </div>
- <script>
+    <script>
         const form = document.getElementById("emailForm");
         const button = document.getElementById("submitBtn");
         const fileInput = document.getElementById("fileInput");
         const fileNameSpan = document.getElementById("fileName");
+        const textarea = document.getElementById("email_text");
+
 
         form.addEventListener("submit", () => {
             form.classList.add("loading");
             button.disabled = true;
             button.querySelector("span").textContent = "Analisando...";
+            const resultado = `📩 Email Recebido:\n${email}\n\n🏷️ Categoria:\n${category}\n\n💬 Resposta Sugerida:\n${response}`;
+            textarea.value = resultado;
+
+            button.disabled = true;
+            button.innerText = "Analisando...";
+            setTimeout(() => {
+                button.disabled = false;
+                button.innerText = "Analisar";
+            }, 2000);
         });
 
         fileInput.addEventListener("change", () => {
@@ -55,14 +64,7 @@
         });
     </script>
 
-    <!-- {% if email %}
-    <h3>Email Recebido:</h3>
-    <p>{{ email }}</p>
-    <h3>Categoria:</h3>
-    <strong>{{ category }}</strong>
-    <h3>Resposta Sugerida:</h3>
-    <p>{{ response }}</p>
-    {% endif %} -->
+
 </body>
 
 </html>
