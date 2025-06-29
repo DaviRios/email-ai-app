@@ -1,85 +1,38 @@
-Email Classifier AI
-Uma aplicação web para automatizar a classificação de emails e geração de respostas automáticas utilizando inteligência artificial. Desenvolvido como solução para empresas que lidam com grande volume de mensagens diárias, reduzindo trabalho manual e otimizando o tempo da equipe.
+# Email Classifier AI
 
-Visão Geral
-O sistema permite que o usuário envie um email (via upload de arquivo .txt ou .pdf ou inserção direta de texto) e retorna:
+A web application designed to automate email classification and generate automatic responses using artificial intelligence.  
+Developed as a solution for companies that handle a high volume of daily messages, reducing manual work and optimizing team productivity.
 
-A classificação do email em Produtivo ou Improdutivo
+---
 
-Uma resposta automática sugerida, gerada com base no conteúdo
+## 📌 Overview
 
-Funcionalidades
-Interface web com formulário para upload de emails ou entrada manual
+The system allows users to submit an email (via `.txt` or `.pdf` file upload or direct text input) and returns:
 
-Classificação automática do conteúdo com base em NLP
+- ✅ Classification of the email as **Productive** or **Unproductive**
+- ✉️ A **suggested automatic response**, generated based on the content
 
-Geração de resposta utilizando modelos de linguagem
+---
 
-Suporte a arquivos .txt e .pdf
+## ⚙️ Features
 
-Tecnologias Utilizadas
-Python 3.10+
+- Web interface with form for file upload or manual text entry  
+- Automatic email classification using NLP (zero-shot)  
+- AI-based reply generation using LLMs  
+- Supports `.txt` and `.pdf` files  
 
-Flask
+---
 
-OpenAI GPT (para geração de resposta)
+## 🧪 Technologies Used
 
-Hugging Face Transformers (para classificação zero-shot)
+- Python 3.10+  
+- Flask  
+- OpenAI GPT (for response generation)  
+- Hugging Face Transformers (for zero-shot classification)  
+- PyMuPDF (PDF parsing)  
+- HTML + CSS (basic frontend)
 
-PyMuPDF (leitura de PDFs)
+---
 
-HTML e CSS (frontend básico)
+## 📁 Project Structure
 
-Estrutura do Projeto
-bash
-Copiar
-Editar
-email-classifier/
-│
-├── backend/
-│   ├── app.py               # API Flask
-│   ├── ai_utils.py          # Lógica de IA
-│   └── templates/
-│       └── index.html       # Interface HTML
-│
-├── .gitignore
-├── requirements.txt
-├── .env.example
-└── README.md
-Como Executar Localmente
-Requisitos
-Python instalado
-
-Chave de API da OpenAI (ou Hugging Face, se aplicável)
-
-Passos
-bash
-Copiar
-Editar
-# Clonar o repositório
-git clone https://github.com/seu-usuario/email-classifier.git
-cd email-classifier
-
-# Criar ambiente virtual
-python -m venv venv
-venv\Scripts\activate  # Windows
-# ou
-source venv/bin/activate  # macOS/Linux
-
-# Instalar dependências
-pip install -r requirements.txt
-
-# Criar arquivo .env com as credenciais
-cp .env.example .env
-# Edite o arquivo .env com sua chave da API
-
-# Executar aplicação
-python backend/app.py
-Acesse em http://localhost:5000
-
-Instruções Adicionais
-Arquivos .env, venv/ e outros temporários estão devidamente ignorados via .gitignore.
-
-A aplicação pode ser facilmente adaptada para deploy em serviços como Vercel, Render ou Heroku.
-
-Todos os scripts estão organizados para facilitar manutenção e extensão futura.
